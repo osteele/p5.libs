@@ -1,7 +1,10 @@
 # p5.layers
 
-p5.layers is a [p5.js](https://p5js.org) library that adds function to simplify
-some common use cases for p5.js Graphics objects.
+p5.layers is a [p5.js](https://p5js.org) library that adds functions to simplify
+some common use cases for p5.js Graphics objects:
+
+![trail example animation](examples/screenshots/trail.gif)
+![trail example animation](examples/screenshots/slices.gif)
 
 It allows code to use the global draw functions (such as `background()`,
 `colorMode()`, `rect()`), without prefixing them with the a variable name. This
@@ -38,10 +41,11 @@ times that it is called.
 
 The Graphics instances that `beginLayer()` creates persist across calls to
 `draw()`. For example, the following code, from
-[examples/lissajous/sketch.js](./examples/lissajous/sketch.js), leaves a trail of circles, because the layer
-is only partially erased (the second argument to `background()` is a value that
-indicates partial opacity). It is drawn onto a canvas that is completely erased
-each frame, as required by the other code in the `draw()` function in that file.
+[examples/lissajous/sketch.js](./examples/lissajous/sketch.js), leaves a trail
+of circles, because the layer is only partially erased (the second argument to
+`background()` is a value that indicates partial opacity). It is drawn onto a
+canvas that is completely erased each frame, as required by the other code in
+the `draw()` function in that file.
 
 ```js
   beginLayer();
@@ -52,7 +56,8 @@ each frame, as required by the other code in the `draw()` function in that file.
   endLayer();
 ```
 
-The equivalent functionality, without using `beginLayer()` and `endLayer()`, would require code in `setup()`, `draw()`, and the global context:
+The equivalent functionality, without using `beginLayer()` and `endLayer()`,
+would require code in `setup()`, `draw()`, and the global context:
 
 ```js
 let pg;
