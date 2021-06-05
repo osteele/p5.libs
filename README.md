@@ -38,7 +38,7 @@ times that it is called.
 
 The Graphics instances that `beginLayer()` creates persist across calls to
 `draw()`. For example, the following code, from
-<./examples/lissajous/sketch.js>, leaves a trail of circles, because the layer
+[examples/lissajous/sketch.js](./examples/lissajous/sketch.js), leaves a trail of circles, because the layer
 is only partially erased (the second argument to `background()` is a value that
 indicates partial opacity). It is drawn onto a canvas that is completely erased
 each frame, as required by the other code in the `draw()` function in that file.
