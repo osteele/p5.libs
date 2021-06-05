@@ -1,21 +1,18 @@
 # p5.layers
 
-p5.layers is a [p5.js](https://p5js.org) library that  simplifies some common
+p5.layers is a [p5.js](https://p5js.org) library that simplifies some common
 use cases for [p5.js Graphics](https://p5js.org/reference/#/p5/createGraphics)
 objects.
 
+It does this by addings this functionality to p5.js:
+
+- A new pair of functions, `beginLayer()` and `endLayer()`, handle variable-free
+  creation and use of a Graphics.
+- `rect()` etc. can be used to draw onto either the canvas or the current layer
+  (p5.Graphics instance), depending on context.
+
 ![trail example animation](examples/screenshots/trail.gif)
 ![trail example animation](examples/screenshots/slices.gif)
-
-It allows code to use the global draw functions (such as `background()`,
-`colorMode()`, `rect()`), without prefixing them with the variable name. This
-makes it easier to change code that draws onto the canvas, to draw onto a
-Graphics instead.
-
-It does this by adding two functions, `beginLayer()` and `endLayer()`, that
-modify these functions to draw onto a layer instead of onto the the canvas.
-These functions can also create the Graphics, and render it onto the canvas,
-simplifying a common use case.
 
 For example:
 
@@ -27,7 +24,7 @@ circle(width / 2, height / 2, 100);
 endLayer();
 ```
 
-is the equivalent of:
+is equivalent to:
 
 ```js
 let pg = createGraphics(100, 100);
@@ -37,8 +34,11 @@ pg.circle(pg.width / 2, pg.height / 2, 100);
 image(pg, 0, 0);
 ```
 
-except that `beginLayer()` the same Graphics the second (and subsequent)
-times that it is called.
+The version with `beginLayer()` doesn't require the use of `pg.` as a prefix in
+order to affect the created Graphics. This simplifies the tasks of modifying a
+sketch so that different parts of it use different layers, and sharing functions
+between sections of the sketch that draw onto the canvas and sections that draw
+onto a layer.
 
 The Graphics instances that `beginLayer()` creates persist across calls to
 `draw()`. For example, the following code, from
@@ -58,7 +58,7 @@ the `draw()` function in that file.
 ```
 
 The equivalent functionality, without using `beginLayer()` and `endLayer()`,
-would require code in `setup()`, `draw()`, and the global context:
+would require code that is distributed among `setup()`, `draw()`, and the global context:
 
 ```js
 let pg;
@@ -85,7 +85,7 @@ Download `p5.layer.js` from this repository and include it in your HTML document
 Or, use the online version:
 
 ```html
-<script src="https://unpkg.com/p5.layers@0.0.1/p5.layers.js" type="text/javascript"></script>
+<script src="https://unpkg.com/p5.layers@0.0/p5.layers.js" type="text/javascript"></script>
 ```
 
 ## Reference
@@ -148,8 +148,8 @@ You can find a collection of examples in the [examples](./examples) folder in th
 ## Motivation
 
 1. My students in Creative Coding frequently wanted to use the equivalent of the
-   Layers concept from GUI painting and drawing applications. I found that this
-   required a significant hurdle, both because of the terminology and the
+   Layers concept that is common in GUI painting and drawing programs. I found
+   that this was a significant hurdle, both because of the terminology and the
    mechanics.
 2. Because the p5.Graphics functions are methods on the instance, changing code
    to operate on the canvas such that it instead operates p5.Graphics requires a
