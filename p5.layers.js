@@ -1,6 +1,6 @@
 const __p5LayerStack = [];
 const __p5LayerDict = new Map();
-const __p5LayerFunctionOmitlist = ['millis'];
+const __p5LayerFunctionOmitlist = ['createGraphics', 'millis'];
 
 function beginLayer(graphicsOrKey, w, h, renderer) {
   if (graphicsOrKey instanceof Number && w instanceof Number) {

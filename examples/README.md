@@ -24,8 +24,13 @@ object to leave a trail, while the rest of the canvas is fully erased.
 : Using two layers in order to slice an sketch into two rectangles, that can be
 moved independently.
 
-[explicit-graphics](./explicit-graphics/)
+[createGraphics](./createGraphics/)
 
 : In this example, `enterLayer()` is only used to temporarily replace the p5.js
 graphics commands. The sketch itself is responsible for creating and drawing the
 Graphics.
+
+[adjacent-layers](./adjacent-layers/)
+
+: Call `enterLayer()` with two different keys, in order to create two Graphics
+that are drawn side by side.
