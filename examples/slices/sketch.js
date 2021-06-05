@@ -1,19 +1,18 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(440, 440);
 }
 
 function draw() {
   background(100);
+  translate(20, 120);
 
-  // draw the two halves of the scene
-
-  translate(10, 110);
-
-  let layer1 = beginLayer(1, 200, 200);
+  // draw the left half of the scene
+  let layer1 = beginLayer('left', 200, 200);
   drawStuff();
   endLayer();
 
-  beginLayer(2, 200, 200);
+  // draw the right half of the scene
+  beginLayer('right', 200, 200);
   push();
   translate(-layer1.width, 0);
   drawStuff();
@@ -37,12 +36,12 @@ function drawStuff() {
 
   stroke(map(mouseY, 0, height, 0, 360), 100, 100);
   let angle = millis() / 1000;
-  let x = map(cos(angle), -1, 1, 0, 400);
-  let y = map(sin(1.4 * angle), -1, 1, 0, 200);
+  let x = map(cos(angle), -1, 1, 10, 400 - 10);
+  let y = map(sin(1.4 * angle), -1, 1, 10, 200 - 10);
   circle(x, y, 20);
 
   push();
-  translate(175, 100);
+  translate(185, 100);
   rotate(millis() / 200);
   rectMode(CENTER);
   rect(0, 0, 50, 50);
