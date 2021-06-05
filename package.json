@@ -1,0 +1,25 @@
+{
+  "name": "p5.layers",
+  "version": "0.0.1",
+  "description": "Simplify some common use cases for p5.js Graphics objects",
+  "main": "p5.layers.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osteele/p5.layers.git"
+  },
+  "keywords": [
+    "p5.js"
+  ],
+  "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osteele/p5.layers/issues"
+  },
+  "homepage": "https://github.com/osteele/p5.layers#readme"
+}

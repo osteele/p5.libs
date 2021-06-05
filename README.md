@@ -1,7 +1,7 @@
 # p5.layers
 
-p5.layers is a [p5.js](https://p5js.org) library that simplifies the use of
-P5.js Graphics objects (created by `createGraphics()`).
+p5.layers is a [p5.js](https://p5js.org) library that adds function to simplify
+some common use cases for p5.js Graphics objects.
 
 It allows code to use the global draw functions (such as `background()`,
 `colorMode()`, `rect()`), without prefixing them with the a variable name. This
