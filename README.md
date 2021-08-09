@@ -1,15 +1,18 @@
 # p5.layers
 
+[![npm version](https://badge.fury.io/js/p5.layers.svg)](https://www.npmjs.com/package/p5.layers)
+
 p5.layers is a [p5.js](https://p5js.org) library that simplifies some common
 use cases for [p5.js Graphics](https://p5js.org/reference/#/p5/createGraphics)
 objects.
 
 It does this by addings this functionality to p5.js:
 
-- A new pair of functions, `beginLayer()` and `endLayer()`, handle variable-free
-  creation and use of a Graphics.
-- `rect()` etc. can be used to draw onto either the canvas or the current layer
-  (p5.Graphics instance), depending on context.
+- A new pair of functions, `beginLayer()` and `endLayer()`, handles
+  variable-free creation and use of a Graphics.
+- The p5.js draw and other canvas functions (e.g. `rect()` , `fill()`) operate
+  either on the canvas, or on the current layer (p5.Graphics instance), depending on
+  whether they are called between a call to `beginLayer()` / `endLayer()`.
 
 ![trail example animation](examples/screenshots/trail.gif)
 ![trail example animation](examples/screenshots/slices.gif)
@@ -17,28 +20,39 @@ It does this by addings this functionality to p5.js:
 For example:
 
 ```js
-beginLayer();
-background(100);
-fill('blue');
-circle(width / 2, height / 2, 100);
-endLayer();
+// with p5.layer
+function draw() {
+  // ...
+  beginLayer();
+  background(100);
+  fill('blue');
+  circle(width / 2, height / 2, 100);
+  endLayer();
+}
 ```
 
 is equivalent to:
 
 ```js
-let pg = createGraphics(100, 100);
-pg.background(100);
-pg.fill('blue');
-pg.circle(pg.width / 2, pg.height / 2, 100);
-image(pg, 0, 0);
+// without p5.layer
+function setup() {
+  // ...
+  let pg = createGraphics(100, 100);
+}
+
+function draw() {
+  // ...
+  pg.background(100);
+  pg.fill('blue');
+  pg.circle(pg.width / 2, pg.height / 2, 100);
+  image(pg, 0, 0);
+}
 ```
 
 The version with `beginLayer()` doesn't require the use of `pg.` as a prefix in
-order to affect the created Graphics. This simplifies the tasks of modifying a
-sketch so that different parts of it use different layers, and sharing functions
-between sections of the sketch that draw onto the canvas and sections that draw
-onto a layer.
+order to affect the created Graphics. This makes it easier to change your mind
+about what goes inside of a layer (or what happens in which of several layers),
+and to write functions that can apply to either the canvas and or a layer.
 
 The Graphics instances that `beginLayer()` creates persist across calls to
 `draw()`. For example, the following code, from
@@ -63,15 +77,19 @@ would require code that is distributed among `setup()`, `draw()`, and the global
 ```js
 let pg;
 
-// in setup():
+function setup() {
+  // ...
   pg = createGraphics(width, height);
+}
 
-// in draw():
+function draw() {
+  // ...
   pg.background(100, 10);
   let x = map(sin(millis() / 500), -1, 1, 0, pg.width);
   let y = map(sin(millis() / 700), -1, 1, 0, pg.height);
   pg.circle(x, y, 20);
   image(pg, 0, 0);
+}
 ```
 
 ## Installation
@@ -85,7 +103,7 @@ Download `p5.layer.js` from this repository and include it in your HTML document
 Or, use the online version:
 
 ```html
-<script src="https://unpkg.com/p5.layers@0.0/p5.layers.js" type="text/javascript"></script>
+<script src="https://unpkg.com/p5.layers" type="text/javascript"></script>
 ```
 
 ## Reference
