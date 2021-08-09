@@ -1,6 +1,6 @@
 {
   "name": "p5.layers",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Simplify some common use cases for p5.js Graphics objects",
   "main": "p5.layers.js",
   "directories": {
