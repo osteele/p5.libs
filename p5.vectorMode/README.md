@@ -39,21 +39,17 @@ rect(pt1, pt2);
 
 ## Installation
 
-Download `p5.vectorMode.js` from this repository and include it in your HTML document:
+Download `p5.vectorMode.js` from this repository and include it in your HTML
+document:
 
 ```html
 <script src="p5.vectorMode.js" type="text/javascript"></script>
 ```
 
-Or, use the online version:
-
-```html
-<script src="https://unpkg.com/p5.vectorMode" type="text/javascript"></script>
-```
-
 ## Examples
 
-You can find a collection of examples in the [examples](./examples) folder in this repository.
+You can find a collection of examples in the [examples](./examples) folder in
+this repository.
 
 ## License
 

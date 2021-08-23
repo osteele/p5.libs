@@ -72,7 +72,8 @@ the `draw()` function in that file.
 ```
 
 The equivalent functionality, without using `beginLayer()` and `endLayer()`,
-would require code that is distributed among `setup()`, `draw()`, and the global context:
+would require code that is distributed among `setup()`, `draw()`, and the global
+context:
 
 ```js
 let pg;
@@ -94,7 +95,8 @@ function draw() {
 
 ## Installation
 
-Download `p5.layer.js` from this repository and include it in your HTML document:
+Download `p5.layer.js` from this repository and include it in your HTML
+document:
 
 ```html
 <script src="p5.layers.js" type="text/javascript"></script>

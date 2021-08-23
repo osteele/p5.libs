@@ -44,7 +44,7 @@ function vectorMode(p5Instance) {
     object[propertyName] = function () {
       let i = 0, o = 0;
       const args = new Array(arguments.length);
-      for (const arity of argListSpec) {
+      for (let arity of argListSpec) {
         if (i >= arguments.length)
           break;
         let arg = arguments[i++];
