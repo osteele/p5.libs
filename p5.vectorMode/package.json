@@ -1,0 +1,24 @@
+{
+  "name": "p5.vector-mode",
+  "version": "0.1.0",
+  "description": "Allow the p5.js functions to accept Vector arguments.",
+  "main": "p5.vectorMode.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "true"
+  },
+  "repository": "github:osteele/p5.libs",
+  "keywords": [
+    "creative coding",
+    "p5",
+    "p5.js"
+  ],
+  "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osteele/p5.libs/issues"
+  },
+  "homepage": "https://github.com/osteele/p5.libs/p5.vectorMode#readme"
+}
