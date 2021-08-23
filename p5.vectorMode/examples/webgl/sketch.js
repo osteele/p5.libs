@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(600, 400, WEBGL);
-  vectorMode();
+  enableVectorArguments();
 }
 
 function draw() {

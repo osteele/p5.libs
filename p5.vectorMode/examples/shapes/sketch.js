@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  vectorMode();
+  enableVectorArguments();
 }
 
 function draw() {

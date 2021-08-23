@@ -1,4 +1,4 @@
-function vectorMode(p5Instance) {
+function enableVectorArguments(p5Instance) {
   // Each key is a list of argument types. 2 indicates a 2D vector, 3 is a 2D or 3D vector
   // depending on the canvas type. A n-D vector can be saturated by the first n components
   // of a p5.Vector, by an Array with length n, or by n arguments from the argument list.
@@ -70,16 +70,12 @@ function vectorMode(p5Instance) {
             // '20', '50').
           } else if (!Number.isNaN(Number(arg))) {
             const stop = o + arity;
-            // console.info('copy', o, stop);
             do {
-              // console.info('write', o, arg);
               args[o++] = arg;
               if (o === stop) break;
               arg = arguments[i++];
-              // console.info('read', i - 1, arg);
             } while (!Number.isNaN(Number(arg)));
             if (o < stop) break;
-            // console.info('copied', args);
           } else
             break;
           continue;
@@ -89,7 +85,6 @@ function vectorMode(p5Instance) {
       while (i < arguments.length) {
         args[o++] = arguments[i++];
       }
-      // console.info(args);
       return originalFn.apply(this, args);
     };
   }

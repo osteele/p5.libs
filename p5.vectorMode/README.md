@@ -1,8 +1,8 @@
-# p5.vectorMode
+# p5.vector-arguments
 
-[![npm version](https://badge.fury.io/js/p5.vectorMode.svg)](https://www.npmjs.com/package/p5.vectorMode)
+[![npm version](https://badge.fury.io/js/p5.vector-arguments.svg)](https://www.npmjs.com/package/p5.vector-arguments)
 
-p5.vectorMode is a [p5.js](https://p5js.org) library that enables the use of
+p5.vector-arguments is a [p5.js](https://p5js.org) library that enables the use of
 [p5.js Vectors](https://p5js.org/reference/#/p5/createVector) with the [p5.js
 Shape functions](https://p5js.org/reference/#group-Shape).
 
@@ -11,7 +11,7 @@ It enables usage such as this:
 ```js
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  vectorMode();
+  enableVectorArguments();
 }
 
 function draw() {
@@ -43,13 +43,13 @@ Download `p5.layer.js` from this repository. Include it in your HTML document by
 adding this line, after the line that includes `p5.js` or `p5.min.js`:
 
 ```html
-<script src="p5.vectorMode.js" type="text/javascript"></script>
+<script src="p5.vector-arguments.js" type="text/javascript"></script>
 ```
 
 Or, use the online version by adding the following line to your HTML document:
 
 ```html
-<script src="https://unpkg.com/p5.vectormode" type="text/javascript"></script>
+<script src="https://unpkg.com/p5.vector-arguments" type="text/javascript"></script>
 ```
 
 ## Examples

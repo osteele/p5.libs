@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(400, 200);
-  vectorMode();
+  enableVectorArguments();
 
   createButton('Red')
     .position(createVector(10, 20))

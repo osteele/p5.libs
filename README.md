@@ -20,9 +20,9 @@ function draw() {
 }
 ```
 
-## p5.vectorMode
+## p5.vector-arguments
 
-[p5.vectorMode](./p5.vectorMode/README.md#readme) enables the use of
+[p5.vector-arguments](./p5.vector-arguments/README.md#readme) enables the use of
 [p5.js Vectors](https://p5js.org/reference/#/p5/createVector) with the [p5.js
 Shape functions](https://p5js.org/reference/#group-Shape).
 

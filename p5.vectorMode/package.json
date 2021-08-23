@@ -1,8 +1,8 @@
 {
-  "name": "p5.vectormode",
+  "name": "p5.vector-arguments",
   "version": "0.1.0",
   "description": "Allow the p5.js functions to accept Vector arguments.",
-  "main": "p5.vectorMode.js",
+  "main": "p5.vector-arguments.js",
   "directories": {
     "example": "examples"
   },
@@ -20,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/osteele/p5.libs/issues"
   },
-  "homepage": "https://github.com/osteele/p5.libs/p5.vectorMode#readme"
+  "homepage": "https://github.com/osteele/p5.libs/p5.vector-arguments#readme"
 }

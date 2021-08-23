@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(400, 400);
-  vectorMode();
+  enableVectorArguments();
 }
 
 function draw() {
