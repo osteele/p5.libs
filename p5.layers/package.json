@@ -9,17 +9,16 @@
   "scripts": {
     "test": "true"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/osteele/p5.layers.git"
-  },
+  "repository": "github:osteele/p5.libs",
   "keywords": [
+    "creative coding",
+    "p5",
     "p5.js"
   ],
   "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/osteele/p5.layers/issues"
+    "url": "https://github.com/osteele/p5.libs/issues"
   },
-  "homepage": "https://github.com/osteele/p5.layers#readme"
+  "homepage": "https://github.com/osteele/p5.libs/p5.layers#readme"
 }
