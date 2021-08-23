@@ -1,5 +1,5 @@
 {
-  "name": "p5.vector-mode",
+  "name": "p5.vectormode",
   "version": "0.1.0",
   "description": "Allow the p5.js functions to accept Vector arguments.",
   "main": "p5.vectorMode.js",
