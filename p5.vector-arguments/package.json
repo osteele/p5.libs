@@ -1,6 +1,6 @@
 {
   "name": "p5.vector-arguments",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Allow the p5.js functions to accept Vector arguments.",
   "main": "p5.vector-arguments.js",
   "directories": {
