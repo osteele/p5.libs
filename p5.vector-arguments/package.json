@@ -2,12 +2,9 @@
   "name": "p5.vector-arguments",
   "version": "0.2.2",
   "description": "Allow the p5.js functions to accept Vector arguments.",
-  "main": "p5.vector-arguments.js",
+  "main": "p5.vector-arguments.min.js",
   "directories": {
     "example": "examples"
-  },
-  "scripts": {
-    "test": "true"
   },
   "repository": "github:osteele/p5.libs",
   "keywords": [
@@ -20,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/osteele/p5.libs/issues"
   },
-  "homepage": "https://osteele.github.io/p5.libs/p5.vector-arguments/"
+  "homepage": "https://osteele.github.io/p5.libs/p5.vector-arguments/",
+  "files": [
+    "p5.vector-arguments.js",
+    "p5.vector-arguments.min.js",
+    "p5.vector-arguments.min.js.map"
+  ],
+  "scripts": {
+    "build": "babel p5.vector-arguments.js -o p5.vector-arguments.min.js --source-maps --no-comments",
+    "prepack": "yarn run build",
+    "test": "true"
+  },
+  "babel": {
+    "presets": [
+      "minify"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  }
 }

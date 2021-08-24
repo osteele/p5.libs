@@ -2,12 +2,9 @@
   "name": "p5.layers",
   "version": "0.1.0",
   "description": "Simplify some common use cases for p5.js Graphics objects",
-  "main": "p5.layers.js",
+  "main": "p5.layers.min.js",
   "directories": {
     "example": "examples"
-  },
-  "scripts": {
-    "test": "true"
   },
   "repository": "github:osteele/p5.libs",
   "keywords": [
@@ -20,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/osteele/p5.libs/issues"
   },
-  "homepage": "https://osteele.github.io/p5.libs/p5.layers/"
+  "homepage": "https://osteele.github.io/p5.libs/p5.layers/",
+  "files": [
+    "p5.layers.js",
+    "p5.layers.min.js",
+    "p5.layers.min.js.map"
+  ],
+  "scripts": {
+    "build": "babel p5.layers.js -o p5.layers.min.js --source-maps --no-comments",
+    "prepack": "yarn run build",
+    "test": "true"
+  },
+  "babel": {
+    "presets": [
+      "minify"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  }
 }

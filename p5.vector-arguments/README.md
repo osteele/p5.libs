@@ -39,11 +39,12 @@ rect(pt1, pt2);
 
 ## Installation
 
-Download `p5.layer.js` from this repository. Include it in your HTML document by
-adding this line, after the line that includes `p5.js` or `p5.min.js`:
+Download `p5.vector-arguments.min` from this repository. Include it in your HTML
+document by adding this line, after the line that includes `p5.js` or
+`p5.min.js`:
 
 ```html
-<script src="p5.vector-arguments.js"></script>
+<script src="p5.vector-arguments.min.js"></script>
 ```
 
 Or, use the online version by adding the following line to your HTML document:

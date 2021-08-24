@@ -17,4 +17,5 @@ globals:
 ignorePatterns:
   - "*/examples/**/*.js"
   - "*/tests/**/*.js"
+  - "**/*.min.js"
   - "**/outtakes.js"
