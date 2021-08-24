@@ -2,11 +2,17 @@ function setup() {
   createCanvas(400, 200);
   enableVectorArguments();
 
+  createDiv('Vectors are used to specify the button positions.')
+    .position(createVector(10, 10))
+    .style('font-size', '10pt');
+
+  let pos = createVector(10, 40);
   createButton('Red')
-    .position(createVector(10, 20))
+    .position(pos)
     .mousePressed(() => background('red'));
 
+  pos.add(width / 2);
   createButton('Green')
-    .position(createVector(10, 20).add(width / 2))
+    .position(pos)
     .mousePressed(() => background('green'));
 }

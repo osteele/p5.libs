@@ -43,10 +43,19 @@ function enableVectorArguments(p5Instance) {
   // Arrays have been replaced by their components.
   function wrap(object, propertyName, argListSpec) {
     const originalFn = object[propertyName];
-    object[propertyName] = function () {
+    const prop = Object.getOwnPropertyDescriptor(object, propertyName);
+    function value() {
       const args = unpackArgumentList(arguments, argListSpec);
       return originalFn.apply(this, args);
-    };
+    }
+    Object.defineProperty(object, propertyName, {
+      ...prop,
+      value
+    });
+    // object[propertyName] = function () {
+    //   const args = unpackArgumentList(arguments, argListSpec);
+    //   return originalFn.apply(this, args);
+    // };
   }
 
   function unpackArgumentList(args, argListSpec) {
