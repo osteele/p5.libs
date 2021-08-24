@@ -57,6 +57,22 @@ Or, use the online version by adding the following line to your HTML document:
 You can find a collection of examples in the [examples](./examples) folder in
 this repository.
 
+## Performance Notes
+
+Run [tests/perf](./tests/perf/index.html) to see the effect of the performance plugin on performance. Look in JavaScript Developer Console.
+
+There are two questions about performance:
+
+1. What is the effect of calling `enableVectorArguments()` on calls that do not
+   use the features that it provide? On my computer, `circle(50, 50, 10)` is
+   about the same speed. `square(10, 10, 50, 50)` is about 2-5% (0.03–0.09µ/call)
+   slower.
+2. Once `enableVectorArguments()` has been called, what is the performance of
+   using a Vector to a function, instead of two (or three) numbers? In my tests,
+   replacing two numbers by a Vector leaves `circle()` about the same speed
+   (sometimes it is faster, sometimes slower) and `rect()` about 45%
+   (0.45µ/call) slower.
+
 ## License
 
 MIT

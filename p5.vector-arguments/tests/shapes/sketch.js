@@ -7,7 +7,6 @@
 function setup() {
   createCanvas(200, 400);
   enableVectorArguments();
-  console.info('enable');
 
   circles();
   rects();
