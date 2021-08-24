@@ -43,13 +43,13 @@ Download `p5.layer.js` from this repository. Include it in your HTML document by
 adding this line, after the line that includes `p5.js` or `p5.min.js`:
 
 ```html
-<script src="p5.vector-arguments.js" type="text/javascript"></script>
+<script src="p5.vector-arguments.js"></script>
 ```
 
 Or, use the online version by adding the following line to your HTML document:
 
 ```html
-<script src="https://unpkg.com/p5.vector-arguments" type="text/javascript"></script>
+<script src="https://unpkg.com/p5.vector-arguments"></script>
 ```
 
 ## Examples
