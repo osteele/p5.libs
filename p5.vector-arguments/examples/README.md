@@ -2,7 +2,8 @@
 
 [dom](./shapes/)
 
-Demonstrates `createButton().position()` with a p5.Vector argument.
+Demonstrates `createDiv().position()`  and `createButton().position()` with
+p5.Vector arguments.
 
 [shapes](./shapes/)
 

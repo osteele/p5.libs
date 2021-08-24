@@ -48,14 +48,10 @@ function enableVectorArguments(p5Instance) {
       const args = unpackArgumentList(arguments, argListSpec);
       return originalFn.apply(this, args);
     }
-    Object.defineProperty(object, propertyName, {
-      ...prop,
-      value
-    });
-    // object[propertyName] = function () {
-    //   const args = unpackArgumentList(arguments, argListSpec);
-    //   return originalFn.apply(this, args);
-    // };
+    value.toString = () => originalFn.toString();
+    Object.defineProperty(object, propertyName, 'get' in prop
+      ? { ...prop, get: () => value }
+      : { ...prop, value });
   }
 
   function unpackArgumentList(args, argListSpec) {
