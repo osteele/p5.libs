@@ -1,3 +1,5 @@
+/* exported beginLayer endLayer */
+
 const __p5LayerStack = [];
 const __p5LayerDict = new Map();
 const __p5LayerFunctionOmitlist = ['createGraphics', 'millis'];
@@ -10,7 +12,7 @@ function beginLayer(graphicsOrKey, w, h, renderer) {
     ? graphicsOrKey
     : __p5LayerDict.get(graphicsOrKey);
   if (!graphics) {
-    graphics = sr = createGraphics(w || width, h || height, renderer || P2D);
+    graphics = createGraphics(w || width, h || height, renderer || P2D);
     if (graphicsOrKey !== 'new') __p5LayerDict.set(graphicsOrKey, graphics);
     graphics.background(0);
     graphics.clear();

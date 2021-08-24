@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "p5.layers",
+    "p5.vector-arguments"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1"
+  }
+}
