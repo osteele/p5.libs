@@ -120,11 +120,11 @@ Syntax:
 > `beginLayer()`
 > `beginLayer([width, height, [renderer]])`
 
-The first time this function is called, it creates a p5.Graphics. Subsequent
-calls return the existing Graphics. (If the arguments are omitted, the Graphics
-is created at the canvas width and height.) On subsequent calls, the `width`,
-`height`, and `renderer` arguments are ignored, and the previously-created
-Graphics is used.
+The first time this function is called, it creates an instance of p5.Graphics.
+Subsequent calls return this instance. (If the arguments are omitted, the
+Graphics is created at the canvas width and height.) On subsequent calls, the
+`width`, `height`, and `renderer` arguments are ignored, and the
+previously-created instance is used.
 
 `beginLayer()` returns the Graphics.
 
@@ -183,7 +183,6 @@ You can find a collection of examples in the [examples](./examples) folder in th
 - The code does not validate its arguments, and does not use the p5.js Friendly
   Error System.
 - The code has only been tested in modern browsers.
-- This project is very new. Other things be wrong with it.
 
 ## License
 
