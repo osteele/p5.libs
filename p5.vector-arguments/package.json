@@ -1,39 +1,35 @@
 {
   "name": "p5.vector-arguments",
   "version": "0.2.3",
-  "description": "Allow the p5.js functions to accept Vector arguments.",
-  "main": "p5.vector-arguments.min.js",
-  "directories": {
-    "example": "examples"
-  },
-  "repository": "github:osteele/p5.libs",
+  "description": "Extend the p5.js functions to accept Vector arguments",
+  "homepage": "https://osteele.github.io/p5.libs/p5.vector-arguments/",
+  "license": "MIT",
+  "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
   "keywords": [
     "creative coding",
     "p5",
     "p5.js"
   ],
-  "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
-  "license": "MIT",
+  "repository": "github:osteele/p5.libs",
   "bugs": {
     "url": "https://github.com/osteele/p5.libs/issues"
   },
-  "homepage": "https://osteele.github.io/p5.libs/p5.vector-arguments/",
+  "main": "p5.vector-arguments.min.js",
   "files": [
     "p5.vector-arguments.js",
-    "p5.vector-arguments.min.js",
-    "p5.vector-arguments.min.js.map"
+    "p5.vector-arguments.min.js"
   ],
   "scripts": {
-    "build": "babel p5.vector-arguments.js -o p5.vector-arguments.min.js --source-maps --no-comments",
+    "build": "rollup --config",
     "prepack": "yarn run build",
     "test": "true"
   },
   "babel": {
-    "presets": [
-      "minify"
-    ],
     "plugins": [
       "@babel/plugin-proposal-object-rest-spread"
     ]
+  },
+  "directories": {
+    "example": "examples"
   }
 }

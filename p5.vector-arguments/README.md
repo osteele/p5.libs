@@ -6,7 +6,8 @@ p5.vector-arguments is a [p5.js](https://p5js.org) library that enables the use 
 [p5.js Vectors](https://p5js.org/reference/#/p5/createVector) with the [p5.js
 Shape functions](https://p5js.org/reference/#group-Shape).
 
-It enables usage such as this:
+It enables usage such as this, where the argument to `circle()` (and other shape
+functions) can be a Vector:
 
 ```js
 function setup() {
@@ -23,6 +24,22 @@ function draw() {
 }
 ```
 
+## Getting Started
+
+Add the following line to your `index.html` document:
+
+```html
+<script src="https://unpkg.com/p5.vector-arguments"></script>
+```
+
+Add the following line to your `setup()` function:
+
+```js
+  enableVectorArguments();
+```
+
+## Details
+
 Any p5.js function that accepts a pair of coordinates _x_ and _y_, can instead
 accept an instance of p5.Vector.
 
@@ -37,26 +54,30 @@ rect(100, 200, pt2);
 rect(pt1, pt2);
 ```
 
-## Installation
+## Examples
 
-Download `p5.vector-arguments.min` from this repository. Include it in your HTML
-document by adding this line, after the line that includes `p5.js` or
-`p5.min.js`:
+You can find a collection of examples in the [examples](./examples) folder in
+this repository.
 
-```html
-<script src="p5.vector-arguments.min.js"></script>
-```
+## Installation Options
 
-Or, use the online version by adding the following line to your HTML document:
+The simplest way to use this file is to add the following line to your
+`index.html` document:
 
 ```html
 <script src="https://unpkg.com/p5.vector-arguments"></script>
 ```
 
-## Examples
+This should go after the line that includes `p5.js` or `p5.min.js`.
 
-You can find a collection of examples in the [examples](./examples) folder in
-this repository.
+Alternatively, download
+[`p5.vector-arguments.js`](/p5.vector-arguments.min.js) from this
+repository. Include it in your HTML document by adding this line, after the line
+that includes `p5.js` or `p5.min.js`:
+
+```html
+<script src="p5.vector-arguments.js"></script>
+```
 
 ## Performance Notes
 

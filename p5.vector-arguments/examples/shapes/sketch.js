@@ -8,7 +8,9 @@ function draw() {
 
   // either of the following two lines will work:
   circle(pt, 20);
-  // circle(center.x, center.y, 20);
+  // circle(pt.x, pt.y, 20);
+
+  // noLoop();
 }
 
 function mousePressed() {
