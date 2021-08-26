@@ -12,6 +12,7 @@
     let graphics = graphicsOrKey instanceof p5.Graphics
       ? graphicsOrKey
       : layerDict.get(graphicsOrKey);
+
     if (!graphics) {
       graphics = createGraphics(w || width, h || height, renderer || P2D);
       if (graphicsOrKey !== 'new') layerDict.set(graphicsOrKey, graphics);

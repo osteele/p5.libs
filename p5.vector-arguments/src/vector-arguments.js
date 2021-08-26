@@ -1,6 +1,6 @@
 p5.prototype.enableVectorArguments = enableVectorArguments;
 
-function enableVectorArguments(p5Instance) {
+function enableVectorArguments() {
   // Each key is a list of argument types. 2 indicates a 2D vector, 3 is a 2D or 3D vector
   // depending on the canvas type. A n-D vector can be saturated by the first n components
   // of a p5.Vector, by an Array with length n, or by n arguments from the argument list.
@@ -33,7 +33,8 @@ function enableVectorArguments(p5Instance) {
     'ellipsoid': [3],
   }
   for (const [key, argListSpec] of Object.entries(functionArgTypes)) {
-    wrap(p5Instance || window, key, argListSpec)
+    this instanceof p5 && wrap(this, key, argListSpec);
+    wrap(window, key, argListSpec);
   }
   wrap(p5.Element.prototype, 'position', [2]);
 }
@@ -48,9 +49,13 @@ function wrap(object, propertyName, argListSpec) {
   }
   newFn.toString = () => originalFn.toString();
   const prop = Object.getOwnPropertyDescriptor(object, propertyName);
-  Object.defineProperty(object, propertyName, 'get' in prop
-    ? { ...prop, get: () => newFn }
-    : { ...prop, value: newFn });
+  if (prop) {
+    Object.defineProperty(object, propertyName, 'get' in prop
+      ? { ...prop, get: () => newFn }
+      : { ...prop, value: newFn });
+  } else {
+    object[propertyName] = newFn;
+  }
 }
 
 function unpackArgumentList(args, argListSpec) {
