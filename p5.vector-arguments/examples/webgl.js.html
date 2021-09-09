@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>webgl.js</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github-dark.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script><style>body {
+  background: hsl(215, 26%, 7%);
+}
+.content {
+  margin: 0 auto;
+}</style></head><body><div class="content"><pre><code class="language-javascript">// Description: Demonstrates `vertex()` with a WEBGL canvas and a 3D `p5.Vector` argument.
+
+function setup() {
+  createCanvas(600, 400, WEBGL);
+  enableVectorArguments();
+}
+
+function draw() {
+  background(100);
+
+  rotateX(millis() / 3000);
+  rotateY(millis() / 4000);
+
+  let pt = createVector(mouseX, mouseY, 100).sub(width / 2, height / 2);
+  ambientLight(60, 60, 60);
+  pointLight(255, 255, 255, pt);
+
+  beginShape();
+  for (let i = 0; i &lt; 100; i++) {
+    let pt = p5.Vector.fromAngle(i * 5 * TWO_PI / 100, 100);
+    let { x: dy, y: dz } = p5.Vector.fromAngle(i * 4.5 * TWO_PI / 100, 80);
+    pt.add(0, dy, dz);
+    vertex(pt);
+  }
+  fill(250, 0, 0, 150);
+  stroke(100, 50, 50, 150);
+  strokeWeight(3);
+  endShape();
+}
+</code></pre></div></body></html>
