@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "build:docs": "jsdoc -c ./jsdoc.js && yarn workspace p5.layers build:docs && yarn workspace p5.vector-arguments build:docs",
+    "build:docs": "mkdir -p build && markdown README.md -f gfm > build/index.html && yarn workspace p5.layers build:docs && yarn workspace p5.vector-arguments build:docs",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "eslint": "^7.32.0",
     "husky": "^7.0.1",
     "jsdoc": "^3.6.7",
+    "markdown-to-html": "^0.0.13",
     "p5-server": "^0.6.1",
     "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2"
