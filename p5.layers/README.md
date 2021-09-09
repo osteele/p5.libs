@@ -102,7 +102,7 @@ function draw() {
 Use the online version by adding the following line to your HTML document:
 
 ```html
-<script src="https://unpkg.com/p5.layers"></script>
+<script src="https://unpkg.com/p5.layers@1"></script>
 ```
 
 ### Option 2: Downloading the library file

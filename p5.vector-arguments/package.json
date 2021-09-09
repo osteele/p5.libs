@@ -1,6 +1,6 @@
 {
   "name": "p5.vector-arguments",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Extend the p5.js functions to accept Vector arguments",
   "homepage": "https://osteele.github.io/p5.libs/p5.vector-arguments/",
   "license": "MIT",

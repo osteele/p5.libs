@@ -55,6 +55,7 @@
   }
 
   p5.prototype.enableVectorArguments = enableVectorArguments;
+  /** Modify the p5.js functions to accept vectors. */
 
   function enableVectorArguments() {
     // Each key is a list of argument types. 2 indicates a 2D vector, 3 is a 2D or 3D vector
@@ -104,8 +105,9 @@
       return originalFn.apply(this, args);
     }
 
-    newFn.toString = () => originalFn.toString();
-
+    newFn.displayName = originalFn.displayName;
+    newFn.name = originalFn.name;
+    newFn.length = originalFn.length;
     const prop = Object.getOwnPropertyDescriptor(object, propertyName);
 
     if (prop) {

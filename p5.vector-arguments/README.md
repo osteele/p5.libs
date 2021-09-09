@@ -31,7 +31,7 @@ You can find a collection of examples [here](./examples).
 Add the following line to your `index.html` document:
 
 ```html
-<script src="https://unpkg.com/p5.vector-arguments"></script>
+<script src="https://unpkg.com/p5.vector-arguments@1"></script>
 ```
 
 Add the following line to your `setup()` function:
@@ -64,7 +64,7 @@ The simplest way to use this file is to add the following line to your
 `index.html` document:
 
 ```html
-<script src="https://unpkg.com/p5.vector-arguments"></script>
+<script src="https://unpkg.com/p5.vector-arguments@1"></script>
 ```
 
 This should go after the line that includes `p5.js` or `p5.min.js`.
