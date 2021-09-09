@@ -17,6 +17,8 @@ It does this by addings this functionality to p5.js:
 ![trail example animation](examples/screenshots/trail.gif)
 ![trail example animation](examples/screenshots/slices.gif)
 
+You can find a collection of examples [here](./examples).
+
 For example:
 
 ```js
@@ -173,10 +175,6 @@ Restores the global draw functions, and draws the Graphics onto the canvas.
 > `endLayer(false)`
 
 Restores the global draw functions. Does not draw the Graphics onto the canvas.
-
-## Examples
-
-You can find a collection of examples in the [examples](./examples) folder in this repository.
 
 ## Motivation
 

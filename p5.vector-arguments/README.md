@@ -24,7 +24,7 @@ function draw() {
 }
 ```
 
-You can find a collection of examples in the [examples](./examples) folder in this repository.
+You can find a collection of examples [here](./examples).
 
 ## Getting Started
 

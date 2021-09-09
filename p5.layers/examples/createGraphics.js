@@ -1,4 +1,4 @@
-// Description: use `enterLayer() to modify the (global) p5.js functions to
+// Description: use `enterLayer()` to modify the (global) p5.js functions to
 // operate on a Graphics instead of the canvas.
 
 let pg;
