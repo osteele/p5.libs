@@ -24,6 +24,8 @@ function draw() {
 }
 ```
 
+You can find a collection of examples in the [examples](./examples) folder in this repository.
+
 ## Getting Started
 
 Add the following line to your `index.html` document:
@@ -54,12 +56,9 @@ rect(100, 200, pt2);
 rect(pt1, pt2);
 ```
 
-## Examples
-
-You can find a collection of examples in the [examples](./examples) folder in
-this repository.
-
 ## Installation Options
+
+### Option 1: Using a CDN
 
 The simplest way to use this file is to add the following line to your
 `index.html` document:
@@ -70,6 +69,8 @@ The simplest way to use this file is to add the following line to your
 
 This should go after the line that includes `p5.js` or `p5.min.js`.
 
+### Option 2: Downloading the library file
+
 Alternatively, download
 [`p5.vector-arguments.js`](/p5.vector-arguments.min.js) from this
 repository. Include it in your HTML document by adding this line, after the line
@@ -78,6 +79,15 @@ that includes `p5.js` or `p5.min.js`:
 ```html
 <script src="p5.vector-arguments.js"></script>
 ```
+
+### Option 3: Using p5-server
+
+The [p5-server](https://github.com/osteele/p5-server#readme) command-line tool,
+and the [P5 Server Visual Studio Code
+Extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server),
+will each infer this library from the presence of call to
+`enableVectorArguments()` in a JavaScript-only sketch (one without an HTML
+file).
 
 ## Performance Notes
 

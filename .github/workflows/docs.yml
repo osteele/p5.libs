@@ -1,0 +1,25 @@
+name: Docs
+
+on:
+  push:
+    branches: [docs]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: |
+          npm install -g yarn
+          yarn install
+
+      - run: yarn run build:docs
+
+      - uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: p5.vector-arguments/build
+          target-folder: p5.vector-arguments

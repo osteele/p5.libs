@@ -1,5 +1,6 @@
 p5.prototype.enableVectorArguments = enableVectorArguments;
 
+/** Modify the p5.js functions to accept vectors. */
 function enableVectorArguments() {
   // Each key is a list of argument types. 2 indicates a 2D vector, 3 is a 2D or 3D vector
   // depending on the canvas type. A n-D vector can be saturated by the first n components

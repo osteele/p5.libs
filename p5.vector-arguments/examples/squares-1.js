@@ -39,4 +39,4 @@ function pointAlongRect(angle, radius) {
   return pt.mult(radius / (abs(x) > abs(y) ? abs(x) : abs(y)));
 }
 
-const sign = n => n > 0 ? 1 : n < 0 ? -1 : 0;
+const sign = n => (n > 0) - (n < 0);

@@ -20,3 +20,8 @@ ignorePatterns:
   - "**/examples/**/*"
   - "**/tests/**/*"
   - "**/*.min.js"
+overrides:
+  - files:
+      - "**/jsdoc.js"
+    globals:
+      module: true
