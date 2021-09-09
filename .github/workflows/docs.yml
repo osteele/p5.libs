@@ -11,6 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - run: git lfs checkout
 
       - run: |
           npm install -g yarn

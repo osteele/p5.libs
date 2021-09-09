@@ -32,5 +32,8 @@
   },
   "directories": {
     "example": "examples"
+  },
+  "devDependencies": {
+    "rollup": "^2.56.3"
   }
 }
