@@ -1,3 +1,6 @@
+// Description: Use a `Graphics` in order for one object to allow one object to
+// leave a trail, while the rest of the canvas is fully erased.
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }

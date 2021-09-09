@@ -1,3 +1,6 @@
+// Description: Call `enterLayer()` with two different keys, in order to create
+// two Graphics that are drawn side by side.
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }

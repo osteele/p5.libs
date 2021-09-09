@@ -21,5 +21,17 @@ jobs:
       - uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
+          folder: build
+          target-folder: .
+
+      - uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: p5.layers/build
+          target-folder: p5.layers
+
+      - uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
           folder: p5.vector-arguments/build
           target-folder: p5.vector-arguments

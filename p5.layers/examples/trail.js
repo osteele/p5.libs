@@ -1,3 +1,6 @@
+// Description: One shape leaves a trail (because a semi-transparent color is
+// drawn over it), while another does not.
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);

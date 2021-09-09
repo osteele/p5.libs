@@ -93,9 +93,19 @@ function draw() {
 }
 ```
 
-## Installation
+## Installation Options
 
-Download `p5.layers.min.js` from this repository. Include it in your HTML
+### Option 1: Using a CDN
+
+Use the online version by adding the following line to your HTML document:
+
+```html
+<script src="https://unpkg.com/p5.layers"></script>
+```
+
+### Option 2: Downloading the library file
+
+Alternatively, download `p5.layers.min.js` from this repository. Include it in your HTML
 document by adding this line, after the line that includes `p5.js` or
 `p5.min.js`:
 
@@ -103,11 +113,13 @@ document by adding this line, after the line that includes `p5.js` or
 <script src="p5.layers.min.js"></script>
 ```
 
-Or, use the online version by adding the following line to your HTML document:
+### Option 3: Using p5-server
 
-```html
-<script src="https://unpkg.com/p5.layers"></script>
-```
+The [p5-server](https://github.com/osteele/p5-server#readme) command-line tool,
+and the [P5 Server Visual Studio Code
+Extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server),
+will each infer this library from the presence of call to `beginLayer()` in a
+JavaScript-only sketch (one without an HTML file).
 
 ## Reference
 
