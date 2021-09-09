@@ -1,6 +1,9 @@
+// Description: Demonstrate `circle()` and `rect()` with vector arguments.
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   enableVectorArguments();
+  rectMode(CENTER);
 }
 
 function draw() {
@@ -9,8 +12,6 @@ function draw() {
   // either of the following two lines will work:
   circle(pt, 20);
   // circle(pt.x, pt.y, 20);
-
-  // noLoop();
 }
 
 function mousePressed() {

@@ -1,3 +1,4 @@
+root: true
 env:
   browser: true
   es6: true
@@ -15,6 +16,7 @@ globals:
   image: true
   P2D: true
 ignorePatterns:
-  - "*/examples/**/*.js"
-  - "*/tests/**/*.js"
+  - "**/build/**/*"
+  - "**/examples/**/*"
+  - "**/tests/**/*"
   - "**/*.min.js"

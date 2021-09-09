@@ -47,7 +47,10 @@ function wrap(object, propertyName, argListSpec) {
     const args = unpackArgumentList(arguments, argListSpec);
     return originalFn.apply(this, args);
   }
-  newFn.toString = () => originalFn.toString();
+  newFn.displayName = originalFn.displayName;
+  newFn.name = originalFn.name;
+  newFn.length = originalFn.length;
+
   const prop = Object.getOwnPropertyDescriptor(object, propertyName);
   if (prop) {
     Object.defineProperty(object, propertyName, 'get' in prop
