@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "build": "rollup --config",
-    "build:docs": "jsdoc -c ./jsdoc.js && p5 build examples -o build/examples",
+    "build:docs": "jsdoc -c ./jsdoc.js && cp -r docs build && p5 build examples -o build/examples",
     "prepack": "yarn run build",
     "test": "true"
   },

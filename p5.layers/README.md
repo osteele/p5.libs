@@ -14,8 +14,8 @@ It does this by addings this functionality to p5.js:
   either on the canvas, or on the current layer (p5.Graphics instance), depending on
   whether they are called between a call to `beginLayer()` / `endLayer()`.
 
-![trail example animation](examples/screenshots/trail.gif)
-![trail example animation](examples/screenshots/slices.gif)
+![trail example animation](./docs/trail.gif)
+![trail example animation](./docs/slices.gif)
 
 You can find a collection of examples [here](./examples).
 

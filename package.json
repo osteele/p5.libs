@@ -6,8 +6,9 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "build:docs": "mkdir -p build && pandoc -dpandoc.yml README.md -o build/index.html && yarn build:workspace:docs",
-    "build:workspace:docs": "yarn workspaces foreach -v --no-private run build:docs",
+    "build:docs": "yarn build:docs:root && yarn build:docs:workspaces",
+    "build:docs:root": "mkdir -p build && pandoc -dpandoc.yml README.md -o build/index.html",
+    "build:docs:workspaces": "yarn workspaces foreach -v --no-private run build:docs",
     "prepare": "husky install"
   },
   "devDependencies": {

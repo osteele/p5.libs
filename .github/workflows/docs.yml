@@ -15,16 +15,16 @@ jobs:
           lfs: true
       - run: git lfs checkout
 
+      - run: |
+          npm install -g yarn
+          yarn install
+
       - run: mkdir build
       - uses: docker://pandoc/core:2.14
         with:
           args: -dpandoc.yml README.md -o build/index.html
 
-      - run: |
-          npm install -g yarn
-          yarn install
-
-      - run: yarn build:workspace:docs
+      - run: yarn build:docs:workspaces
 
       - uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
