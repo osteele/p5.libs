@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "build:docs": "mkdir -p build && markdown README.md -f gfm > build/index.html && yarn workspace p5.layers build:docs && yarn workspace p5.vector-arguments build:docs",
+    "build:docs": "mkdir -p build && markdown README.md -f gfm > build/index.html && yarn workspaces foreach run build:docs",
     "prepare": "husky install"
   },
   "devDependencies": {
