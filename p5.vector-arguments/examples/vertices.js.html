@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>vertices.js</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github-dark.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script><style>body {
+  background: hsl(215, 26%, 7%);
+}
+.content {
+  margin: 0 auto;
+}</style></head><body><div class="content"><pre><code class="language-javascript">// Description: Demonstrates `vertex()` with a 2D `p5.Vector argument`.
+
+function setup() {
+  createCanvas(400, 400);
+  enableVectorArguments();
+}
+
+function draw() {
+  background(0, 1);
+  beginShape();
+  for (let angle = 0; angle &lt;= 360; angle++) {
+    let r = noise(angle / 10, millis() / 1000) * 100 + 100;
+    let pt = p5.Vector.fromAngle(radians(angle), r).add(width / 2, height / 2);
+    fill(angle % 10 ? 'green' : 'red');
+    circle(pt, 5);
+    vertex(pt);
+  }
+  fill(255, 1);
+  endShape();
+}
+</code></pre></div></body></html>
