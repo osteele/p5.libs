@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>squares-1.js</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github-dark.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script><style>body {
+  background: hsl(215, 26%, 7%);
+}
+.content {
+  margin: 0 auto;
+}</style></head><body><div class="content"><pre><code class="language-javascript">function setup() {
+  createCanvas(windowWidth, windowHeight);
+  enableVectorArguments();
+}
+
+function draw() {
+  background(220, 220, 255);
+
+  translate(width / 2, height / 2);
+  rotate(-PI / 2);
+
+  let ratio = 5 * sin(millis() / 8000);
+
+  rotate(radians(millis() / 100));
+  rot = 0;
+  pattern('blue');
+
+  rotate(sin(millis() / 2000) / 50);
+  pattern('red');
+
+  function pattern(c) {
+    stroke(c);
+    for (let angle = 0; angle &lt; 180; angle += 2) {
+      let p1 = pointAlongRect(radians(ratio * angle), map(angle, 0, 180, 200, 100));
+      let p2 = pointAlongRect(radians(angle), map(angle, 0, 180, 100, 200));
+      fill(c);
+      circle(p1, 3);
+      noFill();
+      circle(p2, 5);
+      line(p1, p2);
+    }
+  }
+}
+
+// These are spaced evenly by angle not distance
+function pointAlongRect(angle, radius) {
+  let pt = p5.Vector.fromAngle(angle);
+  let { x, y } = pt;
+  return pt.mult(radius / (abs(x) &gt; abs(y) ? abs(x) : abs(y)));
+}
+
+const sign = n =&gt; (n &gt; 0) - (n &lt; 0);
+</code></pre></div></body></html>
