@@ -18,7 +18,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - run: |
           npm install -g yarn
-          yarn install
+          yarn install --immutable-cache
 
       - run: mkdir build
       - uses: docker://pandoc/core:2.14
