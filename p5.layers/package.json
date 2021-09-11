@@ -1,6 +1,6 @@
 {
   "name": "p5.layers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make it easier to use Graphics instances to make layers",
   "homepage": "https://osteele.github.io/p5.libs/p5.layers/",
   "license": "MIT",
@@ -10,7 +10,11 @@
     "p5",
     "p5.js"
   ],
-  "repository": "github:osteele/p5.libs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osteele/p5.libs.git",
+    "directory": "p5.layers"
+  },
   "bugs": {
     "url": "https://github.com/osteele/p5.libs/issues"
   },
