@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>shapes.js</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github-dark.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script><style>body {
+  background: hsl(215, 26%, 7%);
+}
+.content {
+  margin: 0 auto;
+}</style></head><body><div class="content"><pre><code class="language-javascript">// Description: Demonstrate `circle()` and `rect()` with vector arguments.
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  enableVectorArguments();
+  rectMode(CENTER);
+}
+
+function draw() {
+  let pt = createVector(mouseX, mouseY);
+
+  // either of the following two lines will work:
+  circle(pt, 20);
+  // circle(pt.x, pt.y, 20);
+}
+
+function mousePressed() {
+  let pt = createVector(mouseX, mouseY);
+  let size = createVector(30, 40);
+
+  // any of the following three lines will work:
+  rect(pt, size);
+  // rect(pt, 20, 30);
+  // rect(pt.x, pt.y, 20, 30);
+}
+</code></pre></div></body></html>
