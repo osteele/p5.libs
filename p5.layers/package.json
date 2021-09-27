@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "jsdoc": "^3.6.7",
-    "p5-server": "^0.6.1",
+    "p5-server": "^0.7.0",
     "rollup": "^2.56.3"
   }
 }

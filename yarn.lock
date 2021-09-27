@@ -30,7 +30,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.15.5, @babel/core@npm:^7.15.0":
+"@babel/core@npm:7.15.5, @babel/core@npm:^7.15.0, @babel/core@npm:^7.15.5":
   version: 7.15.5
   resolution: "@babel/core@npm:7.15.5"
   dependencies:
@@ -232,7 +232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-object-rest-spread@npm:^7.14.7":
+"@babel/plugin-proposal-object-rest-spread@npm:^7.14.7, @babel/plugin-proposal-object-rest-spread@npm:^7.15.6":
   version: 7.15.6
   resolution: "@babel/plugin-proposal-object-rest-spread@npm:7.15.6"
   dependencies:
@@ -1042,7 +1042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.1.0, commander@npm:^8.2.0":
+"commander@npm:^8.2.0":
   version: 8.2.0
   resolution: "commander@npm:8.2.0"
   checksum: e868805bc266777f7a9c8a740e15b9e02b8148d8251f577ea9b9ef373ac0bdeb77b9b60cfc033592c9e1affea89993be08c13c623f0c619f9bf152c0e4d12cb0
@@ -3141,7 +3141,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1":
+"node-fetch@npm:^2.6.2":
   version: 2.6.5
   resolution: "node-fetch@npm:2.6.5"
   dependencies:
@@ -3170,7 +3170,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:^4.1.3":
+"node-html-parser@npm:^4.1.4":
   version: 4.1.5
   resolution: "node-html-parser@npm:4.1.5"
   dependencies:
@@ -3400,28 +3400,29 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"p5-analysis@npm:0.6.0":
-  version: 0.6.0
-  resolution: "p5-analysis@npm:0.6.0"
+"p5-analysis@npm:0.6.1":
+  version: 0.6.1
+  resolution: "p5-analysis@npm:0.6.1"
   dependencies:
-    "@babel/core": ^7.15.0
-    "@babel/plugin-proposal-object-rest-spread": ^7.14.7
-    commander: ^8.1.0
+    "@babel/core": ^7.15.5
+    "@babel/plugin-proposal-object-rest-spread": ^7.15.6
+    commander: ^8.2.0
     esprima: ^4.0.1
     jstransformer-marked: ^1.0.3
     minimatch: ^3.0.4
-    node-fetch: ^2.6.1
-    node-html-parser: ^4.1.3
+    node-fetch: ^2.6.2
+    node-html-parser: ^4.1.4
     nunjucks: ^3.2.3
+    prettier: ^2.4.1
   bin:
     p5-analyze: dist/bin/p5-analyze.js
-  checksum: 760533c4ccf8dd1c8ce21d7a6410862acab2a2eaafbc86583ea50cdee2d3e4543fa5b290818f583c95e43066de88eb7db55d220e7fee85cb94f777c01a95c400
+  checksum: 6ed736644cf364a49ae0bedc189a4da957bb7f8305b545043b08d9742d0f28bb8cb0ebc62de87169cef79d4ce6cf3dd4cc0a055238fee0f6be1845368a7808b7
   languageName: node
   linkType: hard
 
-"p5-server@npm:^0.6.1":
-  version: 0.6.3
-  resolution: "p5-server@npm:0.6.3"
+"p5-server@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "p5-server@npm:0.7.0"
   dependencies:
     "@types/ws": ^7.4.7
     chalk: ^4.1.2
@@ -3430,12 +3431,12 @@ fsevents@~2.3.2:
     livereload: ^0.9.3
     marked: ^3.0.3
     open: ^8.2.1
-    p5-analysis: 0.6.0
+    p5-analysis: 0.6.1
     pug: ^3.0.2
     update-notifier: ^5.1.0
   bin:
     p5: dist/bin/p5-server.js
-  checksum: 98a6b21a7a7f40cae0b98141fb2bc7e7b81f380b5538458f164a3f50dea92b62151f16bfcdc60277887adf2df11ba2b994ed7964d53a598b5de9c4e3d4441d6a
+  checksum: f86d3f91b372bf98dfc3bded0a352354aa4203da166ba7f2da39808b2377040d5b33247399c634acdb9c027619f00c6e5485bb4ed39ccac36d054028727dfc4a
   languageName: node
   linkType: hard
 
@@ -3444,7 +3445,7 @@ fsevents@~2.3.2:
   resolution: "p5.layers@workspace:p5.layers"
   dependencies:
     jsdoc: ^3.6.7
-    p5-server: ^0.6.1
+    p5-server: ^0.7.0
     rollup: ^2.56.3
   languageName: unknown
   linkType: soft
@@ -3454,7 +3455,7 @@ fsevents@~2.3.2:
   resolution: "p5.vector-arguments@workspace:p5.vector-arguments"
   dependencies:
     jsdoc: ^3.6.7
-    p5-server: ^0.6.1
+    p5-server: ^0.7.0
     rollup: ^2.56.3
   languageName: unknown
   linkType: soft
@@ -3575,6 +3576,15 @@ fsevents@~2.3.2:
   version: 2.0.0
   resolution: "prepend-http@npm:2.0.0"
   checksum: 7694a9525405447662c1ffd352fcb41b6410c705b739b6f4e3a3e21cf5fdede8377890088e8934436b8b17ba55365a615f153960f30877bf0d0392f9e93503ea
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "prettier@npm:2.4.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
   languageName: node
   linkType: hard
 
@@ -4019,7 +4029,7 @@ fsevents@~2.3.2:
     husky: ^7.0.1
     jsdoc: ^3.6.7
     npm-run-all: ^4.1.5
-    p5-server: ^0.6.1
+    p5-server: ^0.7.0
     rimraf: ^3.0.2
     rollup: ^2.56.3
     rollup-plugin-terser: ^7.0.2
