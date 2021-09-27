@@ -24,7 +24,7 @@ function draw() {
 }
 ```
 
-You can find a collection of examples [here](./examples).
+You can find a collection of examples [here](https://osteele.github.io/p5.libs/p5.vector-arguments/examples/).
 
 ## Getting Started
 

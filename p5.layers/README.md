@@ -17,7 +17,7 @@ It does this by addings this functionality to p5.js:
 ![trail example animation](./docs/trail.gif)
 ![trail example animation](./docs/slices.gif)
 
-You can find a collection of examples [here](./examples).
+You can find a collection of examples [here](https://osteele.github.io/p5.libs/p5.layers/examples/).
 
 For example:
 

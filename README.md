@@ -10,7 +10,7 @@ documentation and examples.
 Graphics](https://p5js.org/reference/#/p5/createGraphics) objects. It makes it
 easier to use Graphics objects to implement drawing layers, and it removes the
 need to add or remove the "`g.`" prefix from draw calls in order to change them
-between drawing on the canvas, and drawing on a Graphics.
+between drawing on the canvas, and drawing on a instance of `Graphics`.
 
 ```js
 function draw() {
