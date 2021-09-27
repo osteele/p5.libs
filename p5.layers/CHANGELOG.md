@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.2]
+
+- Update examples directory on README
+
 ## [1.0.1]
 
 - Add package.json#repository.directory
