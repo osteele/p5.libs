@@ -9,7 +9,8 @@
     "build:docs": "yarn build:docs:root && yarn build:docs:workspaces",
     "build:docs:root": "mkdir -p build && pandoc -dpandoc.yml README.md -o build/index.html",
     "build:docs:workspaces": "yarn workspaces foreach -v --no-private run build:docs",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "yarn workspaces foreach -tv run test"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
