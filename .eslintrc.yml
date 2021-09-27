@@ -16,6 +16,11 @@ globals:
   image: true
   P2D: true
 ignorePatterns:
+  - build
+  - dist
+  - node_modules
+  - out
+  - gh-pages
   - "**/build/**/*"
   - "**/examples/**/*"
   - "**/tests/**/*"
