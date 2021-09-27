@@ -1,34 +1,28 @@
 <h1 id="examples">Examples</h1>
 <p>These sketches are examples for the
-<a href="https://osteele.github.io/p5.libs/p5.layers/">p5.layers</a> p5.js library. They
-demonstrate some effects that can be achieved by using instance of p5.Graphics,
+<a href="https://osteele.github.io/p5.libs/p5.layers/">p5.layers</a> library. They
+demonstrate some effects that can be achieved by using instances of p5.Graphics,
 and techniques for using the p5.layers library to do so.</p>
-<p>This library extend the p5.js functions to accept Vector arguments, so that you
-can write e.g. <code>circle(c, 10)</code> instead of <code>circle(c.x, c.y, 10)</code> (<code>c</code> is a
-variable whose value is an instance of p5.Vector).</p>
-<p>The directory can be opened via <a href="https://osteele.github.io/p5-server/"><code>p5 server</code></a> (which knows how to run
-JavaScript-only sketches, and recognizes to include the <code>p5.layers</code>
-library in these sketches); or it can be browsed on the web at
-<a href="https://osteele.github.io/p5.libs/p5.layers/examples/">https://osteele.github.io/p5.libs/p5.layers/examples/</a>. The web
-version was created by the <code>p5 build</code> subcommand of <code>p5 server</code>.</p>
 <h2 id="contents">Contents</h2>
 <h3 id="trail">trail</h3>
-<p>A common trick is to call <code>background()</code> with a non-full opacity argument, in
-order to leave a trail. This works when everything on the canvas should leave a
-trail. How about when only some objects should leave a trail?</p>
+<p>A common trick in creative coding is to call <code>background()</code> with a non-full
+opacity argument. This causes moving objects to leave a trail. This trick works
+when <em>everything</em> that is drawn on the canvas should leave a trail. How about
+when only <em>some</em> objects should leave a trail?</p>
 <p>One solution is to use an Array, in order to re-draw all the elements of the
 trail each time the canvas is erased. (<a href="https://openprocessing.org/sketch/1031294">This
 example</a> demonstrates this
-technique.) Another is to draw the object that leaves a trail in its own layer.
-That&#39;s what this example does. (<a href="https://openprocessing.org/sketch/1031301">This
-example</a> demonstrates the same
-technique without the p5.layer library.)</p>
+technique.)</p>
+<p>Another is to draw the object that leaves a trail in its own layer. That&#39;s what
+the example in this directory does. (<a href="https://openprocessing.org/sketch/1031301">This
+example</a> demonstrates how to use this
+technique without uisng the p5.layer library.)</p>
 <h3 id="lissajous">lissajous</h3>
 <p>Another example of using a Graphics in order for one object to allow one
 object to leave a trail, while the rest of the canvas is fully erased.</p>
 <h3 id="slices">slices</h3>
-<p>Using two layers in order to slice an sketch into two rectangles, that can be
-moved independently.</p>
+<p>Using two layers in order to slice a sketch into two rectangles. These
+rectangles can then be moved independently around the canvas.</p>
 <h3 id="creategraphics">createGraphics</h3>
 <p>In this example, <code>enterLayer()</code> is only used to temporarily replace the p5.js
 graphics commands. The sketch itself is responsible for creating and drawing the
@@ -36,3 +30,11 @@ Graphics.</p>
 <h3 id="adjacent-layers">adjacent-layers</h3>
 <p>Call <code>enterLayer()</code> with two different keys, in order to create two Graphics
 that are drawn side by side.</p>
+<hr>
+<h2 id="collophon">Collophon</h2>
+<p>The directory can be opened via <a href="https://osteele.github.io/p5-server/"><code>p5 server</code></a>. This command knows how to run
+JavaScript-only sketches, and recognizes that the sketches in this directory
+depend on the <code>p5.vector-arguments</code> library in these sketches.</p>
+<p>Or, it can be browsed on the web at
+<a href="https://osteele.github.io/p5.libs/p5.vector-arguments/examples/">https://osteele.github.io/p5.libs/p5.vector-arguments/examples/</a>.</p>
+<p>The web version was created by the <code>p5 build</code> subcommand of <code>p5 server</code>.</p>

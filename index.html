@@ -21,7 +21,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -92,6 +92,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -223,7 +224,7 @@
 </nav>
 <p>This repository contains libraries for <a href="https://p5js.org">p5.js</a>. Each library has its own documentation page; click on the library name for additional documentation and examples.</p>
 <h1 id="p5.layers"><a href="./p5.layers/">p5.layers</a></h1>
-<p><a href="./p5.layers/">p5.layers</a> simplifies some common use cases for <a href="https://p5js.org/reference/#/p5/createGraphics">p5.js Graphics</a> objects. It makes it easier to use Graphics objects to implement drawing layers, and it removes the need to add or remove the “<code>g.</code>” prefix from draw calls in order to change them between drawing on the canvas, and drawing on a Graphics.</p>
+<p><a href="./p5.layers/">p5.layers</a> simplifies some common use cases for <a href="https://p5js.org/reference/#/p5/createGraphics">p5.js Graphics</a> objects. It makes it easier to use Graphics objects to implement drawing layers, and it removes the need to add or remove the “<code>g.</code>” prefix from draw calls in order to change them between drawing on the canvas, and drawing on a instance of <code>Graphics</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">beginLayer</span>()<span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">background</span>(<span class="dv">100</span>)<span class="op">;</span></span>
