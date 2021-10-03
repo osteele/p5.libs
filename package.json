@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "build:docs": "run-s build:docs:root build:docs:workspaces",
-    "build:docs:root": "mkdir -p build && pandoc -dpandoc.yml README.md -o build/index.html",
+    "build:docs:root": "mkdir -p build && pandoc -dpandoc README.md -o build/index.html",
     "build:docs:workspaces": "yarn workspaces foreach -v --no-private run build:docs",
     "gh-pages:clean": "rimraf 'gh-pages/*'",
     "gh-pages:copy": "copyfiles -u 1 'build/*' gh-pages && copyfiles -u 2 'p5.layers/build/**/*' gh-pages/p5.layers/ && copyfiles -u 2 'p5.vector-arguments/build/**/*' gh-pages/p5.vector-arguments/",
