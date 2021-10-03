@@ -1,8 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "p5.layers",
-    "p5.vector-arguments"
+    "p5.*"
   ],
   "scripts": {
     "lint": "eslint .",

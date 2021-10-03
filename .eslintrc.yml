@@ -14,6 +14,9 @@ globals:
   width: true
   height: true
   image: true
+  translate: true
+  rotate: true
+  scale: true
   P2D: true
 ignorePatterns:
   - build

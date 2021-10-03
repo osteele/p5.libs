@@ -29,6 +29,22 @@ function draw() {
 
 * [Examples](./p5.layers/examples)
 
+### [p5.rotate-about](./p5.rotate-about/)
+
+[p5.rotate-about](./p5.rotate-about/) adds `rotateAbout()` and `scaleAbout()`
+functions.
+
+```js
+function draw() {
+  clear();
+
+  const angle = radians(frameCount);
+  rotateAbout(angle, 100, 200);
+
+  square(10, 10, 50);
+}
+```
+
 ### [p5.vector-arguments](./p5.vector-arguments/)
 
 [p5.vector-arguments](./p5.vector-arguments/) enables the use of [p5.js
@@ -58,16 +74,16 @@ know about these libraries. A JavaScript-only sketch that uses one (or more) of
 them will automatically include the library when it is run by one of these
 tools.
 
+### Keeping in Touch
+
+Report bugs, features requests, and suggestions
+[here](https://github.com/osteele/p5.libs/issues), or message me [on
+Twitter](https://twitter.com/osteele).
+
+Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
+
 ## Other Work
 
 [https://code.osteele.com](https://code.osteele.com#p5-js) lists my other p5.js
 projects. These include tools, libraries, and examples and educational
 materials.
-
-## Keeping in Touch
-
-Report bugs, features requests, and suggestions
-[here](https://github.com/osteele/p5-server/issues), or message me [on
-Twitter](https://twitter.com/osteele).
-
-Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.

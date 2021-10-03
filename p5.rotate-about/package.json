@@ -1,0 +1,45 @@
+{
+  "name": "p5.rotate-about",
+  "version": "0.0.1",
+  "description": "Add p5.js rotateAbout() and scaleAbout() functions",
+  "homepage": "https://osteele.github.io/p5.libs/p5.rotateAbout/",
+  "license": "MIT",
+  "author": "Oliver Steele <steele@osteele.com> (https://osteele.com/)",
+  "keywords": [
+    "creative coding",
+    "p5",
+    "p5.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osteele/p5.libs.git",
+    "directory": "p5.rotate-about"
+  },
+  "bugs": {
+    "url": "https://github.com/osteele/p5.libs/issues"
+  },
+  "main": "p5.rotateAbout.min.js",
+  "files": [
+    "p5.rotateAbout.js",
+    "p5.rotateAbout.min.js"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "build:docs": "rm -rf build && jsdoc -c ./jsdoc.js && cp -r docs build && p5 build examples -o build/examples",
+    "prepack": "yarn run build",
+    "test": "true"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.7",
+    "p5-server": "^0.7.0",
+    "rollup": "^2.56.3"
+  }
+}

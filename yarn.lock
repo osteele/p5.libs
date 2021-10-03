@@ -3450,6 +3450,16 @@ fsevents@~2.3.2:
   languageName: unknown
   linkType: soft
 
+"p5.rotate-about@workspace:p5.rotate-about":
+  version: 0.0.0-use.local
+  resolution: "p5.rotate-about@workspace:p5.rotate-about"
+  dependencies:
+    jsdoc: ^3.6.7
+    p5-server: ^0.7.0
+    rollup: ^2.56.3
+  languageName: unknown
+  linkType: soft
+
 "p5.vector-arguments@workspace:p5.vector-arguments":
   version: 0.0.0-use.local
   resolution: "p5.vector-arguments@workspace:p5.vector-arguments"
