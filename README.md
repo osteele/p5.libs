@@ -2,9 +2,11 @@
 
 This repository contains libraries for [p5.js](https://p5js.org). Each library
 has its own documentation page; click on the library name for additional
-documentation and examples.
+documentation, examples, and installation instructions.
 
-## [p5.layers](./p5.layers/)
+## The Libraries
+
+### [p5.layers](./p5.layers/)
 
 [p5.layers](./p5.layers/) simplifies some common use cases for [p5.js
 Graphics](https://p5js.org/reference/#/p5/createGraphics) objects. It makes it
@@ -27,7 +29,7 @@ function draw() {
 
 * [Examples](./p5.layers/examples)
 
-## [p5.vector-arguments](./p5.vector-arguments/)
+### [p5.vector-arguments](./p5.vector-arguments/)
 
 [p5.vector-arguments](./p5.vector-arguments/) enables the use of [p5.js
 Vectors](https://p5js.org/reference/#/p5/createVector) with the [p5.js Shape
@@ -44,3 +46,28 @@ function draw() {
 ```
 
 * [Examples](./p5.vector-arguments/examples)
+
+## Installation
+
+Each library includes instructions for adding it to an HTML file.
+
+In additon, the [p5 server command-line
+runner](https://osteele.github.io/p5-server/) and the [P5 Server Visual Studio
+extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server)
+know about these libraries. A JavaScript-only sketch that uses one (or more) of
+them will automatically include the library when it is run by one of these
+tools.
+
+## Other Work
+
+[https://code.osteele.com](https://code.osteele.com#p5-js) lists my other p5.js
+projects. These include tools, libraries, and examples and educational
+materials.
+
+## Keeping in Touch
+
+Report bugs, features requests, and suggestions
+[here](https://github.com/osteele/p5-server/issues), or message me [on
+Twitter](https://twitter.com/osteele).
+
+Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
