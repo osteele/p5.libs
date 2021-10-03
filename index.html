@@ -241,13 +241,18 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#the-libraries">The Libraries</a>
+<ul>
 <li><a href="#p5.layers"><span>p5.layers</span></a></li>
 <li><a href="#p5.vector-arguments"><span>p5.vector-arguments</span></a></li>
+</ul></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#other-work">Other Work</a></li>
 </ul>
 </nav>
 <p>This repository contains libraries for <a href="https://p5js.org">p5.js</a>. Each library has its own documentation page; click on the library name for additional documentation, examples, and installation instructions.</p>
-<p>The <a href="https://osteele.github.io/p5-server/">p5 server command-line runner</a> and the <a href="https://marketplace.visualstudio.com/items?itemName=osteele.p5-server">P5 Server Visual Studio extension</a> know about these libraries. A JavaScript-only sketch that uses one (or more) of them will automatically include the library when it is run by one of these tools.</p>
-<h1 id="p5.layers"><a href="./p5.layers/">p5.layers</a></h1>
+<h1 id="the-libraries">The Libraries</h1>
+<h2 id="p5.layers"><a href="./p5.layers/">p5.layers</a></h2>
 <p><a href="./p5.layers/">p5.layers</a> simplifies some common use cases for <a href="https://p5js.org/reference/#/p5/createGraphics">p5.js Graphics</a> objects. It makes it easier to use Graphics objects to implement drawing layers, and it removes the need to add or remove the “<code>g.</code>” prefix from draw calls in order to change them between drawing on the canvas, and drawing on a instance of <code>Graphics</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">beginLayer</span>()<span class="op">;</span></span>
@@ -260,7 +265,7 @@
 <ul>
 <li><a href="./p5.layers/examples">Examples</a></li>
 </ul>
-<h1 id="p5.vector-arguments"><a href="./p5.vector-arguments/">p5.vector-arguments</a></h1>
+<h2 id="p5.vector-arguments"><a href="./p5.vector-arguments/">p5.vector-arguments</a></h2>
 <p><a href="./p5.vector-arguments/">p5.vector-arguments</a> enables the use of <a href="https://p5js.org/reference/#/p5/createVector">p5.js Vectors</a> with the <a href="https://p5js.org/reference/#group-Shape">p5.js Shape functions</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> pt <span class="op">=</span> <span class="fu">createVector</span>(mouseX<span class="op">,</span> mouseY)<span class="op">;</span></span>
@@ -272,5 +277,10 @@
 <ul>
 <li><a href="./p5.vector-arguments/examples">Examples</a></li>
 </ul>
+<h1 id="installation">Installation</h1>
+<p>Each library includes instructions for adding it to an HTML file.</p>
+<p>In additon, the <a href="https://osteele.github.io/p5-server/">p5 server command-line runner</a> and the <a href="https://marketplace.visualstudio.com/items?itemName=osteele.p5-server">P5 Server Visual Studio extension</a> know about these libraries. A JavaScript-only sketch that uses one (or more) of them will automatically include the library when it is run by one of these tools.</p>
+<h1 id="other-work">Other Work</h1>
+<p><a href="">https://code.osteele.com</a> lists my other p5.js projects. These include tools, libraries, examples and educational materials, and my own sketches.</p>
 </body>
 </html>
