@@ -1,4 +1,4 @@
-# p5.js Libraries
+# Oliver's p5.js Libraries
 
 This repository contains libraries for [p5.js](https://p5js.org). Each library
 has its own documentation page; click on the library name for additional
@@ -8,11 +8,12 @@ documentation, examples, and installation instructions.
 
 ### [p5.layers](./p5.layers/)
 
-[p5.layers](./p5.layers/) simplifies some common use cases for [p5.js
-Graphics](https://p5js.org/reference/#/p5/createGraphics) objects. It makes it
-easier to use Graphics objects to implement drawing layers, and it removes the
-need to add or remove the "`g.`" prefix from draw calls in order to change them
-between drawing on the canvas, and drawing on a instance of `Graphics`.
+[p5.layers](./p5.layers/) adds functions that simplify the use of
+  [createGraphics](https://p5js.org/reference/#/p5/createGraphics) and [p5.js
+  Renders](https://p5js.org/reference/#/p5.Renderer) objects. It makes it easier
+  to use Graphics objects to implement drawing layers, and it removes the need
+  to add or remove the "`g.`" prefix from draw calls in order to change them
+  between drawing on the canvas, versus drawing on a instance of `Graphics`.
 
 ```js
 function draw() {
@@ -74,7 +75,7 @@ know about these libraries. A JavaScript-only sketch that uses one (or more) of
 them will automatically include the library when it is run by one of these
 tools.
 
-### Keeping in Touch
+## Keeping in Touch
 
 Report bugs, features requests, and suggestions
 [here](https://github.com/osteele/p5.libs/issues), or message me [on
@@ -87,3 +88,6 @@ Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
 [https://code.osteele.com](https://code.osteele.com#p5-js) lists my other p5.js
 projects. These include tools, libraries, and examples and educational
 materials.
+
+[P5.js notes](https://notes.osteele.com/p5js) has notes on learning and working
+with p5.js
