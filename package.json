@@ -12,7 +12,7 @@
     "gh-pages:copy": "copyfiles -u 1 'build/*' gh-pages && copyfiles -u 2 'p5.layers/build/**/*' gh-pages/p5.layers/ && copyfiles -u 2 'p5.vector-arguments/build/**/*' gh-pages/p5.vector-arguments/",
     "gh-pages:prepare": "test -d gh-pages || git worktree add gh-pages gh-pages",
     "gh-pages:push": "cd gh-pages && git add -A && (git commit -m 'Deploying to gh-pages:publish' || true) && git push origin +gh-pages",
-    "gh-pages:publish": "run-s gh-pages:prepare gh-pages:clean build:docs gh-pages:copy gh-pages:push",
+    "gh-pages": "run-s gh-pages:prepare gh-pages:clean build:docs gh-pages:copy gh-pages:push",
     "prepare": "husky install",
     "test": "yarn workspaces foreach -tv run test"
   },

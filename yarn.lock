@@ -3444,8 +3444,10 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "p5.layers@workspace:p5.layers"
   dependencies:
+    copyfiles: ^2.4.1
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
+    rimraf: ^3.0.2
     rollup: ^2.56.3
   languageName: unknown
   linkType: soft
@@ -3456,6 +3458,7 @@ fsevents@~2.3.2:
   dependencies:
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
+    rimraf: ^3.0.2
     rollup: ^2.56.3
   languageName: unknown
   linkType: soft
@@ -3466,6 +3469,7 @@ fsevents@~2.3.2:
   dependencies:
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
+    rimraf: ^3.0.2
     rollup: ^2.56.3
   languageName: unknown
   linkType: soft

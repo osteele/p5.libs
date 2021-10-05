@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "rollup --config",
-    "build:docs": "rm -rf build && jsdoc -c ./jsdoc.js && cp -r docs build && p5 build examples -o build/examples",
+    "build:docs": "rimraf build && jsdoc -c ./jsdoc.js && copyfiles 'docs/**/*' build && p5 build examples -o build/examples",
     "prepack": "yarn run build",
     "test": "true"
   },
@@ -38,8 +38,10 @@
     "example": "examples"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "jsdoc": "^3.6.7",
     "p5-server": "^0.7.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.56.3"
   }
 }
