@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>p5.js Libraries</title>
+  <title>Oliver’s p5.js Libraries</title>
   <style>
     html {
       line-height: 1.5;
@@ -237,16 +237,20 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">p5.js Libraries</h1>
+<h1 class="title">Oliver’s p5.js Libraries</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#the-libraries">The Libraries</a>
 <ul>
 <li><a href="#p5.layers"><span>p5.layers</span></a></li>
+<li><a href="#p5.rotate-about"><span>p5.rotate-about</span></a></li>
 <li><a href="#p5.vector-arguments"><span>p5.vector-arguments</span></a></li>
 </ul></li>
-<li><a href="#installation">Installation</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#keeping-in-touch">Keeping in Touch</a></li>
+</ul></li>
 <li><a href="#other-work">Other Work</a></li>
 </ul>
 </nav>
@@ -265,22 +269,36 @@
 <ul>
 <li><a href="./p5.layers/examples">Examples</a></li>
 </ul>
+<h2 id="p5.rotate-about"><a href="./p5.rotate-about/">p5.rotate-about</a></h2>
+<p><a href="./p5.rotate-about/">p5.rotate-about</a> adds <code>rotateAbout()</code> and <code>scaleAbout()</code> functions.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clear</span>()<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> angle <span class="op">=</span> <span class="fu">radians</span>(frameCount)<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rotateAbout</span>(angle<span class="op">,</span> <span class="dv">100</span><span class="op">,</span> <span class="dv">200</span>)<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">square</span>(<span class="dv">10</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">50</span>)<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="p5.vector-arguments"><a href="./p5.vector-arguments/">p5.vector-arguments</a></h2>
 <p><a href="./p5.vector-arguments/">p5.vector-arguments</a> enables the use of <a href="https://p5js.org/reference/#/p5/createVector">p5.js Vectors</a> with the <a href="https://p5js.org/reference/#group-Shape">p5.js Shape functions</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> pt <span class="op">=</span> <span class="fu">createVector</span>(mouseX<span class="op">,</span> mouseY)<span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">circle</span>(pt<span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  pt<span class="op">.</span><span class="fu">add</span>(<span class="dv">100</span><span class="op">,</span> <span class="dv">200</span>)<span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">circle</span>(pt<span class="op">,</span> <span class="dv">50</span>)<span class="op">;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">draw</span>() {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> pt <span class="op">=</span> <span class="fu">createVector</span>(mouseX<span class="op">,</span> mouseY)<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">circle</span>(pt<span class="op">,</span> <span class="dv">100</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  pt<span class="op">.</span><span class="fu">add</span>(<span class="dv">100</span><span class="op">,</span> <span class="dv">200</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">circle</span>(pt<span class="op">,</span> <span class="dv">50</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <ul>
 <li><a href="./p5.vector-arguments/examples">Examples</a></li>
 </ul>
 <h1 id="installation">Installation</h1>
 <p>Each library includes instructions for adding it to an HTML file.</p>
 <p>In additon, the <a href="https://osteele.github.io/p5-server/">p5 server command-line runner</a> and the <a href="https://marketplace.visualstudio.com/items?itemName=osteele.p5-server">P5 Server Visual Studio extension</a> know about these libraries. A JavaScript-only sketch that uses one (or more) of them will automatically include the library when it is run by one of these tools.</p>
+<h2 id="keeping-in-touch">Keeping in Touch</h2>
+<p>Report bugs, features requests, and suggestions <a href="https://github.com/osteele/p5.libs/issues">here</a>, or message me <a href="https://twitter.com/osteele">on Twitter</a>.</p>
+<p>Follow <span class="citation" data-cites="osteele">[@osteele on Twitter]</span>(https://twitter.com/osteele) for updates.</p>
 <h1 id="other-work">Other Work</h1>
-<p><a href="">https://code.osteele.com</a> lists my other p5.js projects. These include tools, libraries, examples and educational materials, and my own sketches.</p>
+<p><a href="https://code.osteele.com#p5-js">https://code.osteele.com</a> lists my other p5.js projects. These include tools, libraries, and examples and educational materials.</p>
+<p><a href="https://notes.osteele.com/p5js">P5.js notes</a> has notes on learning and working with p5.js</p>
 </body>
 </html>
