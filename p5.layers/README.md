@@ -195,6 +195,24 @@ Restores the global draw functions. Does not draw the Graphics onto the canvas.
   Error System.
 - The code has only been tested in modern browsers.
 
+<!-- footer -->
+
+## Keeping in Touch
+
+Report bugs, features requests, and suggestions
+[here](https://github.com/osteele/p5.libs/issues), or message me [on
+Twitter](https://twitter.com/osteele).
+
+Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
+
+## Other Work
+
+[p5.js Libraries](https://osteele.github.io/p5.libs/) lists my other p5.js libraries.
+
+[https://code.osteele.com](https://code.osteele.com#p5-js) lists my other p5.js
+projects. These include tools, libraries, and examples and educational
+materials.
+
 ## License
 
 MIT

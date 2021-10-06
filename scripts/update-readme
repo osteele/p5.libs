@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+README=$1
+FOOTER=./docs/readme-footer.md
+tmpfile=$(mktemp /tmp/p5-lib-readme.XXXXXX)
+
+(
+  awk '/<!-- footer -->/ {print; exit} {print}' "$README"; \
+  awk '/<!-- markdownlint-disable / {next} {print}' "${FOOTER}" \
+  ) > $tmpfile
+
+mv $tmpfile $README

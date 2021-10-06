@@ -67,7 +67,9 @@ Unlike `scale()`, both the `x` and `y` values must be supplied to
 `scaleAbout()`. `scaleAbout(2, 100, 200)` does not work a shortcut for
 `scaleAbout(2, 2, 100, 200)`. This may be fixed before version 1.0 is released.
 
-### Keeping in Touch
+<!-- footer -->
+
+## Keeping in Touch
 
 Report bugs, features requests, and suggestions
 [here](https://github.com/osteele/p5.libs/issues), or message me [on
@@ -76,6 +78,8 @@ Twitter](https://twitter.com/osteele).
 Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
 
 ## Other Work
+
+[p5.js Libraries](https://osteele.github.io/p5.libs/) lists my other p5.js libraries.
 
 [https://code.osteele.com](https://code.osteele.com#p5-js) lists my other p5.js
 projects. These include tools, libraries, and examples and educational
