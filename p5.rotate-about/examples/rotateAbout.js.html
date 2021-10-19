@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>rotateAbout.js</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/github-dark.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script><style>body {
+  background: hsl(215, 26%, 7%);
+}
+.content {
+  margin: 0 auto;
+}</style></head><body><div class="content"><pre><code class="language-javascript">function setup() {
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  clear();
+
+  const angle = frameCount;
+  rotateAbout(angle, width / 2, height / 2);
+
+  line(width / 2, 0, width / 2, height);
+  line(0, height / 2, width, height / 2);
+
+  rect(width / 2 - 50, height / 2 - 50, 75, 75);
+  rect(width / 2, height / 2, 100, 100);
+
+  textSize(20);
+  text(`angle = ${angle.toFixed(0)}°`, width / 2, 20);
+}
+</code></pre></div></body></html>
