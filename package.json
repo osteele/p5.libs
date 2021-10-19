@@ -9,7 +9,7 @@
     "build:docs:root": "mkdir -p build && pandoc -dpandoc README.md -o build/index.html",
     "build:docs:workspaces": "yarn workspaces foreach -v --no-private run build:docs",
     "gh-pages:clean": "rimraf 'gh-pages/*'",
-    "gh-pages:copy": "copyfiles -u 1 'build/*' gh-pages && copyfiles -u 2 'p5.layers/build/**/*' gh-pages/p5.layers/ && copyfiles -u 2 'p5.vector-arguments/build/**/*' gh-pages/p5.vector-arguments/",
+    "gh-pages:copy": "./scripts/copy-package-docs",
     "gh-pages:prepare": "test -d gh-pages || git worktree add gh-pages gh-pages",
     "gh-pages:push": "cd gh-pages && git add -A && (git commit -m 'Deploying to gh-pages:publish' || true) && git push origin +gh-pages",
     "gh-pages": "run-s gh-pages:prepare gh-pages:clean build:docs gh-pages:copy gh-pages:push",

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+copyfiles -u 1 'build/*' gh-pages
+
+for dir in $(yarn workspaces list --json | jq --raw-output 'select(.name).location'); do
+  echo "Copying $dir to gh-pages"
+  copyfiles -u 2 "$dir/build/**/*" gh-pages/$dir/
+done
