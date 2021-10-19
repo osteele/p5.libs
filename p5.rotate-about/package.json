@@ -24,7 +24,7 @@
     "p5.rotateAbout.min.js"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "node esbuild.config.js",
     "build:docs": "rimraf build && jsdoc -c ./jsdoc.js && p5 build examples -o build/examples",
     "prepack": "yarn run build",
     "test": "true"

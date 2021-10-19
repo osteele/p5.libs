@@ -24,7 +24,7 @@
     "p5.layers.min.js"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "node esbuild.config.js",
     "build:docs": "rimraf build && jsdoc -c ./jsdoc.js && copyfiles 'docs/**/*' build && p5 build examples -o build/examples",
     "prepack": "yarn run build",
     "test": "true"
