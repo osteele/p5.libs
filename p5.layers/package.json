@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "esbuild": "^0.13.8",
     "jsdoc": "^3.6.7",
     "p5-server": "^0.7.0",
     "rimraf": "^3.0.2",

@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
+    "build": "yarn workspaces foreach -v --no-private run build && yarn update:readmes",
     "build:docs": "run-s build:docs:root build:docs:workspaces",
     "build:docs:root": "mkdir -p build && pandoc -dpandoc README.md -o build/index.html",
     "build:docs:workspaces": "yarn workspaces foreach -v --no-private run build:docs",
@@ -27,7 +28,6 @@
     "husky": "^7.0.1",
     "jsdoc": "^3.6.7",
     "npm-run-all": "^4.1.5",
-    "p5-server": "^0.7.0",
     "rimraf": "^3.0.2"
   }
 }

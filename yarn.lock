@@ -3550,6 +3550,7 @@ fsevents@~2.3.2:
   resolution: "p5.layers@workspace:p5.layers"
   dependencies:
     copyfiles: ^2.4.1
+    esbuild: ^0.13.8
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
     rimraf: ^3.0.2
@@ -3561,6 +3562,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "p5.rotate-about@workspace:p5.rotate-about"
   dependencies:
+    esbuild: ^0.13.8
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
     rimraf: ^3.0.2
@@ -3572,6 +3574,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "p5.vector-arguments@workspace:p5.vector-arguments"
   dependencies:
+    esbuild: ^0.13.8
     jsdoc: ^3.6.7
     p5-server: ^0.7.0
     rimraf: ^3.0.2
@@ -4125,7 +4128,6 @@ fsevents@~2.3.2:
     husky: ^7.0.1
     jsdoc: ^3.6.7
     npm-run-all: ^4.1.5
-    p5-server: ^0.7.0
     rimraf: ^3.0.2
   languageName: unknown
   linkType: soft
