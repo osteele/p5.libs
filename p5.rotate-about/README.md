@@ -5,7 +5,7 @@
 p5.rotate-about is a [p5.js](https://p5js.org) library that adds `rotateAbout()`
 and `scaleAbout()` functions.
 
-  Whereas the p5.js [`rotate()`](https://p5js.org/reference/#/p5/rotate)
+Whereas the p5.js [`rotate()`](https://p5js.org/reference/#/p5/rotate)
 function rotates around the _origin_, `rotateAbout()` takes additional _x_ and
 _y_ arguments (or an additional
 [p5.Vector](https://p5js.org/reference/#/p5.Vector) argument) that specify the
@@ -27,8 +27,13 @@ function draw() {
 }
 ```
 
-You can run this canvas and browse additional examples
-[here](https://osteele.github.io/p5.libs/p5.rotate-about/examples/).
+(You can run this canvas and browse additional examples
+[here](https://osteele.github.io/p5.libs/p5.rotate-about/examples/).)
+
+Note: `rotateAbout()` is a very short, simple function. (See the final
+installation option, below.) This library is most useful when there is a way to
+include it automatically, or when you want to keep each sketch as short as
+possible, for example for pedagogical purposes.
 
 ## Installation Options
 
@@ -57,6 +62,21 @@ and the [P5 Server Visual Studio Code
 Extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server),
 will each infer this library from the presence of call to `rotateAbout()` or
 `scaleAbout()` in a JavaScript-only sketch (a sketch without an HTML file).
+
+### Option 4: Skip the library – simply copy `rotateAbout()` into your sketch
+
+A minimal implementation of `rotateAbout()` – that doesn't work in [p5 instance
+mode](https://p5js.org/examples/instance-mode-instantiation.html) and doesn't
+accept instances of `p5.Vector` – is very simple. Just add the following
+function to your sketch:
+
+```js
+function rotateAbout(x, y, angle) {
+  translate(x, y);
+  rotate(angle);
+  translate(-x, -y);
+}
+```
 
 ## Reference
 
