@@ -3,7 +3,13 @@
 [![npm version](https://badge.fury.io/js/p5.rotate-about.svg)](https://www.npmjs.com/package/p5.rotate-about)
 
 p5.rotate-about is a [p5.js](https://p5js.org) library that adds `rotateAbout()`
-and `scaleAbout()` functions.
+and `scaleAbout()` functions. Whereas the p5.js
+[`rotate()`](https://p5js.org/reference/#/p5/rotate) functions rotates around
+the origin, `rotateAbout()` takes additional _x_ and _y_ arguments (or an
+additional [p5.Vector](https://p5js.org/reference/#/p5.Vector) argument) that
+specifies the center of rotation.
+
+You can find a collection of examples [here](https://osteele.github.io/p5.libs/p5.rotate-about/examples/).
 
 ## Installation Options
 
