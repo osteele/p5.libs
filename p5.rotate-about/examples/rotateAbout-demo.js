@@ -5,6 +5,6 @@ function setup() {
 
 function draw() {
   background(220, 20);
-  rotateAbout(frameCount, 200, 150);
+  rotateAbout(frameCount, 200, 200);
   rect(100, 100, 20, 30);
 }

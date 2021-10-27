@@ -9,8 +9,8 @@ This library adds `rotateAbout()` and `scaleAbout()` functions to
 
 ### rotateAbout demo
 
-A minimal example, that uses `rotateAbout()` to spin a rectangle around a point
-above the center of the canvas.
+A minimal example, that uses `rotateAbout()` to spin a rectangle around the
+center of the canvas.
 
 ### rotateAbout demo 2
 

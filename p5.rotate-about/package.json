@@ -1,6 +1,6 @@
 {
   "name": "p5.rotate-about",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add `rotateAbout()` and `scaleAbout()` functions to p5.js",
   "homepage": "https://osteele.github.io/p5.libs/p5.rotate-about/",
   "license": "MIT",

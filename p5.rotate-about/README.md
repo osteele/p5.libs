@@ -3,13 +3,32 @@
 [![npm version](https://badge.fury.io/js/p5.rotate-about.svg)](https://www.npmjs.com/package/p5.rotate-about)
 
 p5.rotate-about is a [p5.js](https://p5js.org) library that adds `rotateAbout()`
-and `scaleAbout()` functions. Whereas the p5.js
-[`rotate()`](https://p5js.org/reference/#/p5/rotate) functions rotates around
-the origin, `rotateAbout()` takes additional _x_ and _y_ arguments (or an
-additional [p5.Vector](https://p5js.org/reference/#/p5.Vector) argument) that
-specifies the center of rotation.
+and `scaleAbout()` functions.
 
-You can find a collection of examples [here](https://osteele.github.io/p5.libs/p5.rotate-about/examples/).
+  Whereas the p5.js [`rotate()`](https://p5js.org/reference/#/p5/rotate)
+function rotates around the _origin_, `rotateAbout()` takes additional _x_ and
+_y_ arguments (or an additional
+[p5.Vector](https://p5js.org/reference/#/p5.Vector) argument) that specify the
+center of rotation.
+
+A short example:
+
+```js
+// This sketch draws a rectangle that spins around the center of the canvas.
+function setup() {
+  createCanvas(400, 400);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  background(220, 20);
+  rotateAbout(frameCount, 200, 200);
+  rect(100, 100, 20, 30);
+}
+```
+
+You can run this canvas and browse additional examples
+[here](https://osteele.github.io/p5.libs/p5.rotate-about/examples/).
 
 ## Installation Options
 
@@ -23,21 +42,21 @@ Use the online version by adding the following line to your HTML document:
 
 ### Option 2: Downloading the library file
 
-Alternatively, download `p5.layers.min.js` from this repository. Include it in your HTML
-document by adding this line, after the line that includes `p5.js` or
-`p5.min.js`:
+Alternatively, download `p5.rotateAbout.min.js` from this repository. Include it
+in your HTML document by adding this line, after the line that includes `p5.js`
+or `p5.min.js`:
 
 ```html
 <script src="p5.rotateAbout.min.js"></script>
 ```
 
-### Option 3: Using p5-server
+### Option 3: Using the p5-server CLI or Visual Studio Code extension
 
 The [p5-server](https://github.com/osteele/p5-server#readme) command-line tool,
 and the [P5 Server Visual Studio Code
 Extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server),
 will each infer this library from the presence of call to `rotateAbout()` or
-`scaleAbout()` in a JavaScript-only sketch (one without an HTML file).
+`scaleAbout()` in a JavaScript-only sketch (a sketch without an HTML file).
 
 ## Reference
 
