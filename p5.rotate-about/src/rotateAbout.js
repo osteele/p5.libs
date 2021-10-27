@@ -18,13 +18,13 @@ function wrap(name, arity) {
       throw new Error(`${name} was called with the wrong number of arguments (${args.length})`);
     }
     if (z) {
-      translate(x, y, z);
+      this.translate(x, y, z);
       fn.apply(this, passedArgs);
-      translate(-x, -y, -z);
+      this.translate(-x, -y, -z);
     } else {
-      translate(x, y);
+      this.translate(x, y);
       fn.apply(this, passedArgs);
-      translate(-x, -y);
+      this.translate(-x, -y);
 
     }
   }
