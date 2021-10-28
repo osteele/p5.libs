@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PACKAGE_NAME=$(jq -r .name package.json)
+jsdoc -c ./jsdoc.js
+perl -i.bak -p -e "s/<title>.*?<\/title>/<title>${PACKAGE_NAME}<\/title>/" build/index.html
+perl -i.bak -p -e "s/<h1(.*?)>.*?<\/h1>/<h1\$1>${PACKAGE_NAME}<\/h1>/" build/index.html
+perl -i.bak -p -e "s/<h1>.*?<\/h1>//" build/index.html

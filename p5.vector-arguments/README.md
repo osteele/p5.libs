@@ -80,14 +80,14 @@ that includes `p5.js` or `p5.min.js`:
 <script src="p5.vector-arguments.js"></script>
 ```
 
-### Option 3: Using p5-server
+### Option 3: Using the p5-server CLI or VS Code extension
 
 The [p5-server](https://github.com/osteele/p5-server#readme) command-line tool,
 and the [P5 Server Visual Studio Code
 Extension](https://marketplace.visualstudio.com/items?itemName=osteele.p5-server),
-will each infer this library from the presence of call to
-`enableVectorArguments()` in a JavaScript-only sketch (one without an HTML
-file).
+will each infer this library from the presence of a call to
+`enableVectorArguments()` in a JavaScript-only sketch (a sketch that is just a
+JavaScript file, without an HTML file).
 
 ## Performance Notes
 
