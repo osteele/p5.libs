@@ -43,7 +43,7 @@
 
 
     <section>
-        <article>
+        <article><h1>p5.rotate-about</h1>
 <p><a href="https://www.npmjs.com/package/p5.rotate-about"><img src="https://badge.fury.io/js/p5.rotate-about.svg" alt="npm version"></a></p>
 <p>p5.rotate-about is a <a href="https://p5js.org">p5.js</a> library that adds <code>rotateAbout()</code>
 and <code>scaleAbout()</code> functions.</p>
