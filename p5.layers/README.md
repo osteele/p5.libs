@@ -200,10 +200,7 @@ Restores the global draw functions. Does not draw the Graphics onto the canvas.
 ## Keeping in Touch
 
 Report bugs, features requests, and suggestions
-[here](https://github.com/osteele/p5.libs/issues), or message me [on
-Twitter](https://twitter.com/osteele).
-
-Follow [@osteele on Twitter](https://twitter.com/osteele) for updates.
+[here](https://github.com/osteele/p5.libs/issues).
 
 ## Other Work
 
